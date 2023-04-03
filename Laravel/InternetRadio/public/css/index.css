@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #3a3838;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    height: 20vh;
+}
+
