@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\radioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/upload', [RadioController::class, 'index']);
+
+Route::get('/upload/create', [RadioController::class, 'create']);
+
+Route::post('/upload', [RadioController::class, 'store']);
+
+Route::get('/upload/{id}/edit', [RadioController::class, 'edit']);
