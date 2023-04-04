@@ -18,6 +18,13 @@ class actieveRadioController extends Controller
         return view("index")->with('actief', $actief)->with('uploads', $uploads);
     }
 
+    function radioOutput(){
+        $uploads = Upload::all();
+        $actief = Actief::first();
+
+        return view("RadioOutput.index")->with('actief', $actief)->with('uploads', $uploads);
+    }
+
     function volgende(){
         
         $actief = Actief::first();

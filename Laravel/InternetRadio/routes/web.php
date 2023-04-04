@@ -28,3 +28,5 @@ Route::get('/upload/create', [RadioController::class, 'create']);
 Route::post('/upload', [RadioController::class, 'store'])->name('upload.store');
 
 Route::get('/upload/{id}/edit', [RadioController::class, 'edit']);
+
+Route::get('/radioOutput', [actieveRadioController::class, 'radioOutput']);
