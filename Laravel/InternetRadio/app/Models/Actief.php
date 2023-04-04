@@ -9,4 +9,6 @@ class Actief extends Model
 {
     use HasFactory;
     protected $table = 'actiefs';
+    public $timestamps = false;
+    protected $primaryKey = 'actief';
 }

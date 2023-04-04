@@ -4,21 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Upload;
+use App\Models\Actief;
 
 class radioController extends Controller
 {
-    public function index()
-    {
+    function index(){
         $uploads = Upload::all();
-
+        $actief = Actief::first();
         
-        return view('upload.index', ['uploads' => $uploads]);
-          
+        return view("index")->with('actief', $actief)->with('uploads', $uploads);
     }
 
     public function create(){
 
-        return view('upload.create');
+        return view('/upload/create');
     }
 
     public function store(Request $request){
@@ -29,14 +28,14 @@ class radioController extends Controller
             'radio_url' => $request->input('radio_url'),
         ]);
         
-        return redirect('upload.index');
+        return redirect('upload');
     }
 
     public function edit($id){
         $upload = Upload::find($id)->first();
 
 
-        return view('upload.edit')->with('upload', $upload);
+        return view('/upload/edit')->with('upload', $upload);
     }
 
     public function mainIndex(){

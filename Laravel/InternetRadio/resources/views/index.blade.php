@@ -5,6 +5,7 @@
 <a href="/upload">Radio's</a>
 
 <a href="/volgende">Volgende Radio</a>
+<a href="/vorige">Vorige Radio</a>
 
-{{$actief->actief}}
+
 @endsection

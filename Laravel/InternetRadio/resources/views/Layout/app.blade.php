@@ -9,7 +9,23 @@
 </head>
 <body>
     <header>
-    
+        <?php
+            $index = 1;
+        ?>
+        @foreach($uploads as $upload)
+
+            @if ( $index == $actief->actief)
+                <section>
+                    <h1>Radio naam: {{$upload->radio_name}}</h1>
+                    <p>Radio url: {{$upload->radio_url}}</p>
+                </section>
+
+            
+            @endif
+            <?php
+                $index = $index + 1;
+            ?>
+        @endforeach
     </header>
     
     @yield('content')

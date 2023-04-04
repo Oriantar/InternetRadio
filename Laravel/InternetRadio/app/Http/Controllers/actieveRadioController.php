@@ -25,18 +25,18 @@ class actieveRadioController extends Controller
             
             $actief->actief = 1;
         }else{
-            $actief = $actief->actief + 1;
+            $actief->actief = $actief->actief + 1;
         }
-        $actief->save();
+        $actief->update();
         return redirect("/");
     }
 
     function vorige(){
         $actief = Actief::first();
-        if($actief <= 1){
-            $actief = Upload::count();
+        if($actief->actief <= 1){
+            $actief->actief = Upload::count();
         }else{
-            $actief = $actief - 1;
+            $actief->actief = $actief->actief - 1;
         }
         $actief->save();
         return redirect("/");
