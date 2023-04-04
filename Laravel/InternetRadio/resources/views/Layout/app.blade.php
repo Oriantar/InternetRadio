@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        {{-- <p>actieve radio: {{$activeRadio->radio_name}}</p> --}}
+    
     </header>
     
     @yield('content')

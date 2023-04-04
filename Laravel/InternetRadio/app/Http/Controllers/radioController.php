@@ -29,7 +29,7 @@ class radioController extends Controller
             'radio_url' => $request->input('radio_url'),
         ]);
         
-        return redirect('/upload');
+        return redirect('upload.index');
     }
 
     public function edit($id){
@@ -37,5 +37,12 @@ class radioController extends Controller
 
 
         return view('upload.edit')->with('upload', $upload);
+    }
+
+    public function mainIndex(){
+        $uploads = Upload::all();
+
+        
+        return view('index', ['uploads' => $uploads]);
     }
 }

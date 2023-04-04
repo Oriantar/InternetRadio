@@ -3,10 +3,10 @@
 @section('content')
 
 <article>
-    <a href="create"> Voeg een radio toe! </a>
+    <a href="upload/create"> Voeg een radio toe! </a>
 
     <section>
-        <h1>Uploads</h1>
+        <h1>Radio's</h1>
     </section>
     @foreach ($uploads as $upload)
     <section>

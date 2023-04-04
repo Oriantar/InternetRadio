@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\actieveRadioController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\radioController;
 
@@ -14,9 +15,11 @@ use App\Http\Controllers\radioController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [actieveRadioController::class, 'index']);
+
+Route::get('/volgende', [actieveRadioController::class, 'volgende']);
+
+Route::get('/vorige', [actieveRadioController::class, 'vorige']);
 
 Route::get('/upload', [RadioController::class, 'index']);
 
