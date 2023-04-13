@@ -7,12 +7,8 @@ $index = 1;
     
     {{$upload->radio_url}}
 
-
-
 @endif
 <?php
     $index = $index + 1;
 ?>
 @endforeach
-
-
