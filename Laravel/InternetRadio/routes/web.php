@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\actieveRadioController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\radioController;
+use App\Http\Controllers\volumeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [actieveRadioController::class, 'index']);
+
+Route::get('/volgende', [actieveRadioController::class, 'volgende']);
+
+Route::get('/vorige', [actieveRadioController::class, 'vorige']);
+
+Route::get('/upload', [RadioController::class, 'index'])->name('upload.index');
+
+Route::get('/upload/create', [RadioController::class, 'create']);
+
+Route::post('/upload', [RadioController::class, 'store'])->name('upload.store');
+
+Route::get('/upload/{id}/edit', [RadioController::class, 'edit']);
+
+Route::get('/radioOutput', [actieveRadioController::class, 'radioOutput']);
+
+Route::get('/volumeOutput', [volumeController::class, 'volumeOutput']);
+
+Route::get('/volume/volgende', [volumeController::class, 'volgende']);
+
+Route::get('/volume/vorige', [volumeController::class, 'vorige']);
