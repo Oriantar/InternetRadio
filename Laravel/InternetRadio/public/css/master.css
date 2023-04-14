@@ -124,3 +124,12 @@ img{
     display:grid;
     width: 30%;
 }
+
+footer{
+    margin-top: 18%;
+    background-color: black;
+    height: 5vh;
+    color: white;
+    padding-left: 38%;
+    
+}

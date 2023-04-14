@@ -40,13 +40,13 @@ $index = 1;
 </section>
 
 <section class="volume">
-    <img src="{{asset('Images/speaker_luid.webp')}}">
+    <a href="/volume/vorige"><img src="{{asset('Images/speaker_luid.webp')}}"></a>
     <button class="volumeknop" id="volume1"></button>
     <button class="volumeknop" id="volume2"></button>
     <button class="volumeknop" id="volume3"></button>
     <button class="volumeknop" id="volume4"></button>
     <button class="volumeknop" id="volume5"></button>
-    <img src="{{asset('Images/speaker_luid.webp')}}">
+    <a href="/volume/volgende"><img src="{{asset('Images/speaker_luid.webp')}}"></a>
     <div class="verticale_lijn"></div>
 </section>
 

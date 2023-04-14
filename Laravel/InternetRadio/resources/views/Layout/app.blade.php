@@ -16,7 +16,9 @@
     <main>
     @yield('content')
     </main>
+    
     <footer>
+        <p>De PaddenstoelRadio is een project van Floribanaan/Oriantar.</p>
 
     </footer>
 </body>

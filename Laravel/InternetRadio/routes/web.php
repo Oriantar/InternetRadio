@@ -3,6 +3,7 @@
 use App\Http\Controllers\actieveRadioController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\radioController;
+use App\Http\Controllers\volumeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,9 @@ Route::post('/upload', [RadioController::class, 'store'])->name('upload.store');
 Route::get('/upload/{id}/edit', [RadioController::class, 'edit']);
 
 Route::get('/radioOutput', [actieveRadioController::class, 'radioOutput']);
+
+Route::get('/volumeOutput', [volumeController::class, 'volumeOutput']);
+
+Route::get('/volume/volgende', [volumeController::class, 'volgende']);
+
+Route::get('/volume/vorige', [volumeController::class, 'vorige']);
